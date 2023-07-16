@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Server Node Selector</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <iframe id="header" src="header.html" frameborder="0"></iframe>
+  </header>
+  <hr>
+  <main>
+    <left>
+      <div>
+        <label>Protocol:</label>
+        <div>
+          <input type="checkbox" name="protocol" value="vmess">
+          <label>VMess</label>
+        </div>
+        <div>
+          <input type="checkbox" name="protocol" value="ss">
+          <label>Shadowsocks</label>
+        </div>
+        <div>
+          <input type="checkbox" name="protocol" value="ssr">
+          <label>ShadowsocksR</label>
+        </div>
+        <div>
+          <input type="checkbox" name="protocol" value="trojan">
+          <label>Trojan</label>
+        </div>
+      </div>
+      <hr>
+      <div>
+        <label>Area:</label>
+        <div>
+          <input type="checkbox" name="area" value="HK">
+          <label>Hong Kong</label>
+        </div>
+        <div>
+          <input type="checkbox" name="area" value="JP">
+          <label>Japan</label>
+        </div>
+        <div>
+          <input type="checkbox" name="area" value="SG">
+          <label>Singapore</label>
+        </div>
+        <div>
+          <input type="checkbox" name="area" value="US">
+          <label>The US</label>
+        </div>
+        <div>
+          <input type="checkbox" name="area" value="BR">
+          <label>The UK</label>
+        </div>
+        <div>
+          <input type="checkbox" name="area" value="KR">
+          <label>Korea</label>
+        </div>
+        <div>
+          <input type="checkbox" name="area" value="SG">
+          <label>Singapore</label>
+        </div>
+        <div>
+          <input type="checkbox" name="area" value="SG">
+          <label>Singapore</label>
+        </div>
+        <div>
+          <input type="checkbox" name="area" value="SG">
+          <label>Singapore</label>
+        </div>
+        <div>
+          <input type="checkbox" name="area" value="SG">
+          <label>Singapore</label>
+        </div>
+        <!-- Add more checkboxes for other areas -->
+      </div>
+      <hr>
+      <div>
+        <label for="speedA">Speed:</label> <br>
+        <input type="number" id="speedA" placeholder="Min delay (ms)"> <br>
+        <input type="number" id="speedB" placeholder="Max delay (ms)">
+      </div>
+      <div class="showUrl">
+        <label>Show Request URL:</label>
+        <input type="checkbox" id="showUrlCheckbox" onchange="toggleUrlTextarea()">
+      </div>
+      <hr>
+      <div>
+        <label>Select All Nodes:</label>
+        <input type="checkbox" id="selectAllCheckbox">
+      </div>
+      <hr>
+      <button id="submit" onclick="sendRequest()">Get Proxies</button>
+    </left>
+    <right>
+      <textarea class="showUrl" id="url" readonly></textarea>
+      <textarea id="results" readonly></textarea>
+    </right>
+  </main>
+  <!-- <footer>
+    <iframe src="footer.html" frameborder="0"></iframe>
+  </footer> -->
+  <script src="script.js"></script>
+</body>
+
+</html>
